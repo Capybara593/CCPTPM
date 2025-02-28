@@ -13,6 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
+    gap: 20px;
 }
 
 /* Hộp chứa form */
