@@ -8,25 +8,56 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Đăng Nhập</h2>
-        <form>
-            <div class="input-group">
-                <label for="username">Tên đăng nhập</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Mật khẩu</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Lưu tài khoản</label>
-            </div>
-            <div class="signin-group"></div>
-                 <button type="submit">Đăng Nhập</button>
-                <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
-            </div>
-        </form>
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h2>Đăng Nhập</h2>
+            <form>
+                <div class="input-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lưu tài khoản</label>
+                </div>
+                <div class="signin-group">
+                    <button type="submit">Đăng Nhập</button>
+                    <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+                    <p class="forgot-link"><a href="#" onclick="showForgotForm()">Quên mật khẩu?</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgotForm" style="display: none;">
+            <h2>Quên Mật Khẩu</h2>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="signin-group">
+                    <button type="submit">Gửi</button>
+                    <p><a href="#" onclick="showLoginForm()">Quay lại đăng nhập</a></p>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <script>
+        function showForgotForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('forgotForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('forgotForm').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
