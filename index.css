@@ -131,3 +131,42 @@ button[type="submit"]:hover {
 .register-link a:hover {
     text-decoration: underline;
 }
+
+/* Form quên mật khẩu */
+.forgot-password {
+    margin-top: 20px; /* Khoảng cách giữa form login và form quên mật khẩu */
+}
+
+.forgot-password .input-group {
+    margin-bottom: 15px; /* Khoảng cách giữa các input */
+}
+
+.forgot-password .input-group label {
+    color: #00459f;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.forgot-password .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4facfe; /* Màu xanh giống nút Đăng Nhập */
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.forgot-btn:hover {
+    background: #3a8bf5; /* Màu khi hover, giống nút Đăng Nhập */
+}
